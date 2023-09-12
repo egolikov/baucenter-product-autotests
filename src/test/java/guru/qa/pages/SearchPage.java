@@ -2,15 +2,15 @@ package guru.qa.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.empty;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.*;
 
 public class SearchPage {
 
     SelenideElement searchContent = $(".ib-wrapper"),
-                    title = $("#h1_title");
+                    title = $("#h1_title"),
+                    addToCartButton = $("[data-tooltip-text='Добавить в корзину']"),
+                    addedToCart = $(".price-block_cart-added");
 
     public SearchPage openPage() {
         open("/search");
@@ -26,6 +26,13 @@ public class SearchPage {
 
     public SearchPage checkSearchContent() {
         searchContent.shouldNotBe(empty);
+
+        return this;
+    }
+
+    public SearchPage addToCart() {
+        addToCartButton.click();
+        addedToCart.shouldBe(visible);
 
         return this;
     }
