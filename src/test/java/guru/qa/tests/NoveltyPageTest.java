@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-public class NoveltyPageTest {
+public class NoveltyPageTest extends BaseTest {
 
 
     MainPage mainPage = new MainPage();

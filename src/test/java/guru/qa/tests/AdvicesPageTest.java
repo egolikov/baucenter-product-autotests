@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-public class AdvicesPageTest {
+public class AdvicesPageTest extends BaseTest {
 
     MainPage mainPage = new MainPage();
     AdvicesPage advicesPage = new AdvicesPage();

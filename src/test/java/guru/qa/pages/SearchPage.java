@@ -7,25 +7,25 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class NoveltyPage {
+public class SearchPage {
 
-    SelenideElement noveltyContent = $(".otherActions"),
+    SelenideElement searchContent = $(".ib-wrapper"),
                     title = $("#h1_title");
 
-    public NoveltyPage openPage() {
-        open("/new");
+    public SearchPage openPage() {
+        open("/search");
 
         return this;
     }
 
-    public NoveltyPage checkNoveltyTitle(String value) {
+    public SearchPage checkSearchTitle(String value) {
         title.shouldHave(text(value));
 
         return this;
     }
 
-    public NoveltyPage checkNoveltyContent() {
-        noveltyContent.shouldNotBe(empty);
+    public SearchPage checkSearchContent() {
+        searchContent.shouldNotBe(empty);
 
         return this;
     }

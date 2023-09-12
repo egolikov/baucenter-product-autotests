@@ -1,6 +1,7 @@
 package guru.qa.pages;
 
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import java.util.List;
@@ -16,7 +17,8 @@ public class MainPage {
                     noveltyButton = $("a[href=\"/new/\"]"),
                     discountsButton = $("a[href=\"/discounts/\"]"),
                     serviceButton = $("a[href=\"/services/\"]"),
-                    advicesButton = $("a[href=\"/advices/\"]");
+                    advicesButton = $("a[href=\"/advices/\"]"),
+                    searchInput = $("#title-search-input");
 
     ElementsCollection categoryList = $$("#menu-catalog");
 
@@ -73,6 +75,12 @@ public class MainPage {
 
     public MainPage clickAdvicesButton() {
         advicesButton.click();
+
+        return this;
+    }
+
+    public MainPage searchInputText(String value) {
+        searchInput.setValue(value).pressEnter();
 
         return this;
     }

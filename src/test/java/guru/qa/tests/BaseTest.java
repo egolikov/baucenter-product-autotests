@@ -23,6 +23,7 @@ public class BaseTest {
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.pageLoadStrategy = "eager";
+        Configuration.timeout = 10000;
 //        Configuration.remote = System.getProperty("selenoidBaseUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
