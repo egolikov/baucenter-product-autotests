@@ -20,7 +20,6 @@ public class MainPage {
 
     ElementsCollection categoryList = $$("#menu-catalog");
 
-
     public MainPage openPage() {
         open("/");
 
