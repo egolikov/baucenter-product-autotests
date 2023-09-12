@@ -2,6 +2,7 @@ package guru.qa.tests;
 
 import guru.qa.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -16,6 +17,8 @@ public class MainPageTest extends BaseTest {
                                                 "Двери, лестницы, окна", "Хранение", "Товары для дома и уборки");
 
     @Test
+    @Tag("Smoke")
+    @Tag("NavigationPanel")
     @DisplayName("Проверка наличия всех категорий в Каталоге товаров")
     void checkCategoriesList() {
 

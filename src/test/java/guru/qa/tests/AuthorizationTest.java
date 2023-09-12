@@ -2,6 +2,7 @@ package guru.qa.tests;
 
 import guru.qa.pages.AuthorizationPage;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -11,6 +12,8 @@ public class AuthorizationTest extends BaseTest {
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
     @Test
+    @Tag("Smoke")
+    @Tag("Authorization")
     @DisplayName("Успешная авторизация")
     void successfulAuthorization() {
 
@@ -37,6 +40,8 @@ public class AuthorizationTest extends BaseTest {
     }
 
     @Test
+    @Tag("Smoke")
+    @Tag("Authorization")
     @DisplayName("Неуспешная авторизация")
     void failedAuthorization() {
 

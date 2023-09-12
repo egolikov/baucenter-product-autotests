@@ -4,6 +4,7 @@ import guru.qa.pages.CartPage;
 import guru.qa.pages.MainPage;
 import guru.qa.pages.SearchPage;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -15,6 +16,8 @@ public class CartPageTest extends BaseTest {
     CartPage cartPage = new CartPage();
 
     @Test
+    @Tag("Smoke")
+    @Tag("Cart")
     @DisplayName("Проверка добавления и отображения товара в Корзине")
     void checkCartContent() {
 

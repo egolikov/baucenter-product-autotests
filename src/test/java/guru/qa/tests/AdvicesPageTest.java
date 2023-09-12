@@ -3,6 +3,7 @@ package guru.qa.tests;
 import guru.qa.pages.AdvicesPage;
 import guru.qa.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -13,6 +14,8 @@ public class AdvicesPageTest extends BaseTest {
     AdvicesPage advicesPage = new AdvicesPage();
 
     @Test
+    @Tag("Smoke")
+    @Tag("NavigationPanel")
     @DisplayName("Проверка работоспособности раздела Советы")
     void checkAdvicesContent() {
 

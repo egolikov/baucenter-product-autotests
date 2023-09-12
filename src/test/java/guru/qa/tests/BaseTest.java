@@ -24,7 +24,7 @@ public class BaseTest {
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
-//        Configuration.remote = System.getProperty("selenoidBaseUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.remote = System.getProperty("selenoidBaseUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -32,20 +32,20 @@ public class BaseTest {
                 "enableVideo", true
         ));
 
-//        Configuration.browserCapabilities = capabilities;
+        Configuration.browserCapabilities = capabilities;
     }
 
-//    @BeforeEach
-//    void addListener() {
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-//    }
+    @BeforeEach
+    void addListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
 
     @AfterEach
     void addAttachments() {
-//        Attach.screenshotAs("Last screenshot");
-//        Attach.pageSource();
-//        Attach.browserConsoleLogs();
-//        Attach.addVideo();
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
 
         closeWebDriver();
     }
