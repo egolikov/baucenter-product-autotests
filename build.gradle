@@ -44,22 +44,3 @@ tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 }
-
-task demoQA_test(type: Test) {
-    useJUnitPlatform{
-        includeTags("demoQA")
-}
-
-task registrationTest_test(type: Test) {
-        useJUnitPlatform{
-            includeTags("registrationTest")
-}
-
-task textBoxTest_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("textBoxTest")
-}
-
-        }
-    }
-}
