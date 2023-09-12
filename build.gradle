@@ -44,3 +44,34 @@ tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 }
+
+task Smoke_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke")
+    }
+
+    task Authorization_test(type: Test) {
+        useJUnitPlatform {
+            includeTags("Authorization")
+        }
+
+        task Cart_test(type: Test) {
+            useJUnitPlatform {
+                includeTags("Cart")
+            }
+
+            task Search_test(type: Test) {
+                useJUnitPlatform {
+                    includeTags("Search")
+                }
+
+                task NavigationPanel_test(type: Test) {
+                    useJUnitPlatform {
+                        includeTags("NavigationPanel")
+                    }
+
+                }
+            }
+        }
+    }
+}
