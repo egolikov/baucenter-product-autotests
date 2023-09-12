@@ -13,22 +13,10 @@ public class MainPage {
     SelenideElement categoryButton = $(".top-nav_catalog_heading"),
                     cityTooltip = $(".city-tooltip"),
                     actionsButton = $("a[href=\"/actions/\"]"),
-                    actionsContent = $(".action-page-wrapper"),
                     noveltyButton = $("a[href=\"/new/\"]"),
-                    noveltyContent = $(".otherActions"),
-                    title = $("#h1_title"),
-
                     discountsButton = $("a[href=\"/discounts/\"]"),
-                    discountsContent = $(".bonuses-block_wrap"),
-                    titleD = $(".paddings.h2"),
-
                     serviceButton = $("a[href=\"/services/\"]"),
-                    serviceContent = $(".services-block"),
-                    titleS = $(".h1"),
-
-                    advicesButton = $("a[href=\"/advices/\"]"),
-                    advicesContent = $(".ib-wrapper"),
-                    titleSov = $("#h1_title");
+                    advicesButton = $("a[href=\"/advices/\"]");
 
     ElementsCollection categoryList = $$("#menu-catalog");
 
@@ -66,32 +54,8 @@ public class MainPage {
         return this;
     }
 
-    public MainPage checkActionsTitle(String value) {
-        title.shouldHave(text(value));
-
-        return this;
-    }
-
-    public MainPage checkActionsContent() {
-        actionsContent.shouldNotBe(empty);
-
-        return this;
-    }
-
     public MainPage clickNoveltyButton() {
         noveltyButton.click();
-
-        return this;
-    }
-
-    public MainPage checkNoveltyTitle(String value) {
-        title.shouldHave(text(value));
-
-        return this;
-    }
-
-    public MainPage checkNoveltyContent() {
-        noveltyContent.shouldNotBe(empty);
 
         return this;
     }
@@ -102,50 +66,14 @@ public class MainPage {
         return this;
     }
 
-    public MainPage checkDiscountsTitle(String value) {
-        titleD.shouldHave(text(value));
-
-        return this;
-    }
-
-    public MainPage checkDiscountsContent() {
-        discountsContent.shouldNotBe(empty);
-
-        return this;
-    }
-
     public MainPage clickServiceButton() {
         serviceButton.click();
 
         return this;
     }
 
-    public MainPage checkServiceTitle(String value) {
-        titleS.shouldHave(text(value));
-
-        return this;
-    }
-
-    public MainPage checkServiceContent() {
-        serviceContent.shouldNotBe(empty);
-
-        return this;
-    }
-
     public MainPage clickAdvicesButton() {
         advicesButton.click();
-
-        return this;
-    }
-
-    public MainPage checkAdvicesTitle(String value) {
-        titleSov.shouldHave(text(value));
-
-        return this;
-    }
-
-    public MainPage checkAdvicesContent() {
-        advicesContent.shouldNotBe(empty);
 
         return this;
     }
