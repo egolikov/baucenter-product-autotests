@@ -23,6 +23,10 @@ public class DiscountsPageTest extends BaseTest {
             mainPage.openPage();
         });
 
+        step("Убрать всплывающее окно с выбором Города, если появилось на странице", () -> {
+            mainPage.removeCityTooltipIfExists();
+        });
+
         step("Нажать кнопку Новинки", () -> {
             mainPage.clickDiscountsButton();
         });

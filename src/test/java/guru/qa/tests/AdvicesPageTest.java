@@ -23,6 +23,10 @@ public class AdvicesPageTest extends BaseTest {
             mainPage.openPage();
         });
 
+        step("Убрать всплывающее окно с выбором Города, если появилось на странице", () -> {
+            mainPage.removeCityTooltipIfExists();
+        });
+
         step("Нажать кнопку Советы", () -> {
             mainPage.clickAdvicesButton();
         });
