@@ -1,5 +1,5 @@
 
-<h1 >Проект по автоматизации тестирования сайта <a href="https://baucenter.ru/ "> Бацентр</a></h1>
+<h1 >Проект по автоматизации тестирования сайта <a href="https://baucenter.ru/ "> Бауцентр</a></h1>
 
 # 🧾 Содержание:
 
@@ -96,7 +96,7 @@ gradle clean test -Denv=remote
 ## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-884">Jira</a>
 
 <p align="center">  
-<img title="Jira" src="images/screen/Jira.png" width="">  
+<img title="Jira" src="images/screen/JiraSc.png" width="">  
 </p>
 
 ____
@@ -107,7 +107,7 @@ ____
 </p>
 
 ____
-## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов на Selenoid
+## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Видеопример выполнения теста на Selenoid
 ____
 <p align="center">
 <img title="Selenoid Video" src="images/screen/ExampleVideo.gif" width="550" height="350"  alt="video">   
