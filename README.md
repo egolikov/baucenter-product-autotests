@@ -50,12 +50,12 @@
 
 ## 🚀 Команда для запуска автотестов из терминала
 
-Удаленный запуск с использованием Jenkins+Selinoid(требуется логин и пароль):
+Удаленный запуск с использованием Jenkins и Selenoid (требуется логин и пароль):
 ```bash  
 gradle clean test -Denv=remote
 ```
 
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report	</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/baucenter-product-autotests-egolikov/7/allure/">Allure Report</a>
 
 
 ## 🖨️ Основная страница отчёта
