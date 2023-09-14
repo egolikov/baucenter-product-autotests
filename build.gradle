@@ -45,32 +45,32 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
 }
 
+task SmokeTest(type: Test) {
+    useJUnitPlatform {
+        includeTags "Smoke"
+    }
+}
+
 task Smoke_test(type: Test) {
     useJUnitPlatform {
-        includeTags("Smoke")
+        includeTags "Authorization"
     }
+}
 
-    task Authorization_test(type: Test) {
-        useJUnitPlatform {
-            includeTags("Authorization")
-        }
+task Cart_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "Cart"
+    }
+}
 
-        task Cart_test(type: Test) {
-            useJUnitPlatform {
-                includeTags("Cart")
-            }
+task Search_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "Search"
+    }
+}
 
-            task Search_test(type: Test) {
-                useJUnitPlatform {
-                    includeTags("Search")
-                }
-
-                task NavigationPanel_test(type: Test) {
-                    useJUnitPlatform {
-                        includeTags("NavigationPanel")
-                    }
-                }
-            }
-        }
+task NavigationPanel_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "NavigationPanel"
     }
 }
