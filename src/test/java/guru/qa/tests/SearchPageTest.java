@@ -1,7 +1,5 @@
 package guru.qa.tests;
 
-import guru.qa.pages.MainPage;
-import guru.qa.pages.SearchPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -9,9 +7,6 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 public class SearchPageTest extends BaseTest {
-
-    MainPage mainPage = new MainPage();
-    SearchPage searchPage = new SearchPage();
 
     @Test
     @Tag("Smoke")
@@ -34,6 +29,5 @@ public class SearchPageTest extends BaseTest {
         step("Проверка содержания контента поиска", () -> {
             searchPage.checkSearchContent();
         });
-
     }
 }

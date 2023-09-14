@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class AdvicesPage {
 
     SelenideElement advicesContent = $(".ib-wrapper"),
-                    title = $("#h1_title");
+            title = $("#h1_title");
 
     public AdvicesPage openPage() {
         open("/advices");

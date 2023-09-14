@@ -1,6 +1,5 @@
 package guru.qa.tests;
 
-import guru.qa.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -10,11 +9,11 @@ import java.util.List;
 import static io.qameta.allure.Allure.step;
 
 public class MainPageTest extends BaseTest {
-    MainPage mainPage = new MainPage();
+
     List<String> expectedCategories = List.of("Сад", "Стройматериалы", "Инструменты", "Крепеж и скобяные изделия",
-                                                "Водоснабжение, отопление, вентиляция", "Электротовары", "Краски и строительная химия",
-                                                "Освещение", "Обои, интерьер, декор", "Кухни", "Плитка", "Сантехника", "Напольные покрытия",
-                                                "Двери, лестницы, окна", "Хранение", "Товары для дома и уборки");
+            "Водоснабжение, отопление, вентиляция", "Электротовары", "Краски и строительная химия",
+            "Освещение", "Обои, интерьер, декор", "Кухни", "Плитка", "Сантехника", "Напольные покрытия",
+            "Двери, лестницы, окна", "Хранение", "Товары для дома и уборки");
 
     @Test
     @Tag("Smoke")
@@ -23,7 +22,7 @@ public class MainPageTest extends BaseTest {
     void checkCategoriesList() {
 
         step("Открыть Главную Страницу", () -> {
-        mainPage.openPage();
+            mainPage.openPage();
         });
 
         step("Убрать всплывающее окно с выбором Города, если появилось на странице", () -> {
@@ -31,12 +30,11 @@ public class MainPageTest extends BaseTest {
         });
 
         step("Нажать кнопку Каталог товаров", () -> {
-        mainPage.clickCategoryButton();
+            mainPage.clickCategoryButton();
         });
 
         step("Проверка наличия всех категорий", () -> {
-        mainPage.checkCategoryList(expectedCategories);
+            mainPage.checkCategoryList(expectedCategories);
         });
-
     }
 }

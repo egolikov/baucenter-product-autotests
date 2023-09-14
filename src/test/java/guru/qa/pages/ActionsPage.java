@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class ActionsPage {
 
     SelenideElement actionsContent = $(".action-page-wrapper"),
-                    title = $("#h1_title");
+            title = $("#h1_title");
 
     public ActionsPage openPage() {
         open("/actions");

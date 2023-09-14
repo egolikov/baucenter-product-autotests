@@ -3,6 +3,7 @@ package guru.qa.tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import guru.qa.helpers.Attach;
+import guru.qa.pages.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -14,6 +15,16 @@ import java.util.Map;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class BaseTest {
+
+    MainPage mainPage = new MainPage();
+    ActionsPage actionsPage = new ActionsPage();
+    AdvicesPage advicesPage = new AdvicesPage();
+    AuthorizationPage authorizationPage = new AuthorizationPage();
+    CartPage cartPage = new CartPage();
+    DiscountsPage discountsPage = new DiscountsPage();
+    NoveltyPage noveltyPage = new NoveltyPage();
+    SearchPage searchPage = new SearchPage();
+    ServicePage servicePage = new ServicePage();
 
     @BeforeAll
     static void beforeAll() {

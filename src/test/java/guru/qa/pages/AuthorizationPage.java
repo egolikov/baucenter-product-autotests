@@ -8,10 +8,10 @@ import static com.codeborne.selenide.Selenide.*;
 public class AuthorizationPage {
 
     SelenideElement userLogin = $("#USER_LOGIN"),
-                    userPassword = $("#USER_PASSWORD"),
-                    submitButton = $("[value='Войти']"),
-                    successfulMessage = $("#h1_title"),
-                    errorMessage = $(".s-form_error");
+            userPassword = $("#USER_PASSWORD"),
+            submitButton = $("[value='Войти']"),
+            successfulMessage = $("#h1_title"),
+            errorMessage = $(".s-form_error");
 
     public AuthorizationPage openPage() {
         open("/personal");
@@ -47,5 +47,4 @@ public class AuthorizationPage {
 
         return this;
     }
-
 }

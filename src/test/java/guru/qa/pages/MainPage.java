@@ -11,13 +11,13 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPage {
 
     SelenideElement categoryButton = $(".top-nav_catalog_heading"),
-                    cityTooltip = $(".city-tooltip"),
-                    actionsButton = $("a[href=\"/actions/\"]"),
-                    noveltyButton = $("a[href=\"/new/\"]"),
-                    discountsButton = $("a[href=\"/discounts/\"]"),
-                    serviceButton = $("a[href=\"/services/\"]"),
-                    advicesButton = $("a[href=\"/advices/\"]"),
-                    searchInput = $("#title-search-input");
+            cityTooltip = $(".city-tooltip"),
+            actionsButton = $("a[href=\"/actions/\"]"),
+            noveltyButton = $("a[href=\"/new/\"]"),
+            discountsButton = $("a[href=\"/discounts/\"]"),
+            serviceButton = $("a[href=\"/services/\"]"),
+            advicesButton = $("a[href=\"/advices/\"]"),
+            searchInput = $("#title-search-input");
 
     ElementsCollection categoryList = $$("#menu-catalog");
 

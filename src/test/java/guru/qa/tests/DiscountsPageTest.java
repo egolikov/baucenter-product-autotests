@@ -1,7 +1,5 @@
 package guru.qa.tests;
 
-import guru.qa.pages.DiscountsPage;
-import guru.qa.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -9,9 +7,6 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 public class DiscountsPageTest extends BaseTest {
-
-    MainPage mainPage = new MainPage();
-    DiscountsPage discountsPage = new DiscountsPage();
 
     @Test
     @Tag("Smoke")
@@ -38,6 +33,5 @@ public class DiscountsPageTest extends BaseTest {
         step("Проверка содержания контента на странице Бонусы и скидки", () -> {
             discountsPage.checkDiscountsContent();
         });
-
     }
 }
