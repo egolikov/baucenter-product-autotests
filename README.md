@@ -2,7 +2,7 @@
 <h1 >Проект по автоматизации тестирования сайта <a href="https://baucenter.ru/ "> Бауцентр</a></h1>
 
 <p align="center">  
-<img src="images/screen/BauLogo.png" alt="MainLogo" width="950"/></a>  
+<img src="images/logo/BauLogo.png" alt="MainLogo" width="950"/></a>  
 </p>
 
 # 🧾 Содержание:
