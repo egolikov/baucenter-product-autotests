@@ -110,6 +110,6 @@ ____
 ## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Видеопример выполнения теста на Selenoid
 ____
 <p align="center">
-<img title="Selenoid Video" src="images/screen/ExampleVideo.gif" width="550" height="350"  alt="video">   
+<img title="Selenoid Video" src="images/screen/VideoSe.gif" width="550" height="350"  alt="video">   
 </p>
 
