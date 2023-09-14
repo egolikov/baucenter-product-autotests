@@ -55,7 +55,7 @@
 gradle clean test -Denv=remote
 ```
 
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/baucenter-product-autotests-egolikov/7/allure/">Allure Report</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/baucenter-product-autotests-egolikov/7/allure/">Allure Report</a>
 
 
 ## 🖨️ Основная страница отчёта
