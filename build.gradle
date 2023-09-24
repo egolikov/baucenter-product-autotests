@@ -51,7 +51,7 @@ task SmokeTest(type: Test) {
     }
 }
 
-task Smoke_test(type: Test) {
+task Authorization_test(type: Test) {
     useJUnitPlatform {
         includeTags "Authorization"
     }
