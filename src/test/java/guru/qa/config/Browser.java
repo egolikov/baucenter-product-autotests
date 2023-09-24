@@ -1,6 +1,6 @@
 package guru.qa.config;
 
-public enum Browsers {
+public enum Browser {
     CHROME,
     FIREFOX
 }

@@ -10,7 +10,7 @@ public interface WebConfig extends Config {
 
     @Key("browser")
     @DefaultValue("CHROME")
-    Browsers getBrowser();
+    Browser getBrowser();
 
     @Key("browserVersion")
     @DefaultValue("99.0")
