@@ -1,5 +1,6 @@
 package guru.qa.tests;
 
+import guru.qa.pages.AuthorizationPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -14,6 +15,8 @@ public class AuthorizationTest extends BaseTest {
 
     private final AuthorizationConfig authorizationConfig = ConfigManager.getAuthorization();
     private final BadAuthorizationConfig badAuthorizationConfig = ConfigManager.getBadAuthorization();
+
+    AuthorizationPage authorizationPage = new AuthorizationPage();
 
     @Test
     @Tag("Smoke")

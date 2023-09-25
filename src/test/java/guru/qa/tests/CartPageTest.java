@@ -1,5 +1,6 @@
 package guru.qa.tests;
 
+import guru.qa.pages.CartPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -7,6 +8,8 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 public class CartPageTest extends BaseTest {
+
+    CartPage cartPage = new CartPage();
 
     @Test
     @Tag("Smoke")

@@ -16,15 +16,6 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class BaseTest {
 
     MainPage mainPage = new MainPage();
-    ActionsPage actionsPage = new ActionsPage();
-    AdvicesPage advicesPage = new AdvicesPage();
-    AuthorizationPage authorizationPage = new AuthorizationPage();
-    CartPage cartPage = new CartPage();
-    DiscountsPage discountsPage = new DiscountsPage();
-    NoveltyPage noveltyPage = new NoveltyPage();
-    SearchPage searchPage = new SearchPage();
-    ServicePage servicePage = new ServicePage();
-
     private static final WebConfig config = ConfigManager.Instance.read();
 
     @BeforeAll
