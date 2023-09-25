@@ -1,12 +1,22 @@
 package guru.qa.tests;
 
+import guru.qa.pages.AuthorizationPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
+import guru.qa.config.AuthorizationConfig;
+import guru.qa.config.BadAuthorizationConfig;
+import guru.qa.config.ConfigManager;
+
 public class AuthorizationTest extends BaseTest {
+
+    private final AuthorizationConfig authorizationConfig = ConfigManager.getAuthorization();
+    private final BadAuthorizationConfig badAuthorizationConfig = ConfigManager.getBadAuthorization();
+
+    AuthorizationPage authorizationPage = new AuthorizationPage();
 
     @Test
     @Tag("Smoke")
@@ -19,11 +29,11 @@ public class AuthorizationTest extends BaseTest {
         });
 
         step("Ввести валидный Логин", () -> {
-            authorizationPage.setLogin("79136696616");
+            authorizationPage.setLogin(authorizationConfig.Username());
         });
 
         step("Ввести валидный Пароль", () -> {
-            authorizationPage.setPassword("i1f70y7g");
+            authorizationPage.setPassword(authorizationConfig.Password());
         });
 
         step("Нажать кнопку Войти", () -> {
@@ -46,11 +56,11 @@ public class AuthorizationTest extends BaseTest {
         });
 
         step("Ввести невалидный Логин", () -> {
-            authorizationPage.setLogin("7913");
+            authorizationPage.setLogin(badAuthorizationConfig.BadUserName());
         });
 
         step("Ввести невалидный Пароль", () -> {
-            authorizationPage.setPassword("123qwe");
+            authorizationPage.setPassword(badAuthorizationConfig.BadPassword());
         });
 
         step("Нажать кнопку Войти", () -> {
