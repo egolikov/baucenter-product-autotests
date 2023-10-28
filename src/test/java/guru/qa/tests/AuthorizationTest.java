@@ -1,6 +1,10 @@
 package guru.qa.tests;
 
 import guru.qa.pages.AuthorizationPage;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,6 +15,10 @@ import guru.qa.config.AuthorizationConfig;
 import guru.qa.config.BadAuthorizationConfig;
 import guru.qa.config.ConfigManager;
 
+@Owner("Голиков Евгений")
+@Epic(value = "Тестирование веб приложения Бауцентр")
+@Feature(value = "Новая фунциональность веб приложения Бауцентр")
+@Story("Авторизация")
 public class AuthorizationTest extends BaseTest {
 
     private final AuthorizationConfig authorizationConfig = ConfigManager.getAuthorization();

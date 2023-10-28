@@ -1,12 +1,20 @@
 package guru.qa.tests;
 
 import guru.qa.pages.ServicePage;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
+@Owner("Голиков Евгений")
+@Epic(value = "Тестирование веб приложения Бауцентр")
+@Feature(value = "Новая фунциональность веб приложения Бауцентр")
+@Story("Функциональность разделов")
 public class ServicePageTest extends BaseTest {
 
     ServicePage servicePage = new ServicePage();
