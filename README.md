@@ -57,8 +57,9 @@
 gradle clean test -Denv=remote
 ```
 
-Для локального запуска потребуется наличие файла /src/test/resources/credentials.properties
-В этом файле необходимо указать свойства со своими значениями:
+Для локального запуска потребуется наличие файла */src/test/resources/credentials.properties*
+
+#### В этом файле необходимо указать свойства со своими значениями:
 
 * Username = Username
 * Password = Password
