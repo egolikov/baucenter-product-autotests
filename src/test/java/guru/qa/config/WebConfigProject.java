@@ -31,5 +31,4 @@ public class WebConfigProject {
             Configuration.browserCapabilities = capabilities;
         }
     }
-
 }
