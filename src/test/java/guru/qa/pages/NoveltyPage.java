@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class NoveltyPage {
 
-    SelenideElement noveltyContent = $(".otherActions"),
+    private final SelenideElement noveltyContent = $(".otherActions"),
             title = $("#h1_title");
 
     public NoveltyPage openPage() {

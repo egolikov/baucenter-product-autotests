@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
-    SelenideElement categoryButton = $(".top-nav_catalog_heading"),
+    private final SelenideElement categoryButton = $(".top-nav_catalog_heading"),
             cityTooltip = $(".city-tooltip"),
             actionsButton = $("a[href=\"/actions/\"]"),
             noveltyButton = $("a[href=\"/new/\"]"),

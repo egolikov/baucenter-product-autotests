@@ -18,8 +18,8 @@ import static io.qameta.allure.Allure.step;
 @Story("Товары и корзина")
 public class CartPageTest extends BaseTest {
 
-    SearchPage searchPage = new SearchPage();
-    CartPage cartPage = new CartPage();
+    protected SearchPage searchPage = new SearchPage();
+    protected CartPage cartPage = new CartPage();
 
     @Test
     @Tag("Smoke")

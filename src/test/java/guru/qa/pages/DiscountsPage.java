@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class DiscountsPage {
 
-    SelenideElement discountsContent = $(".bonuses-block_wrap"),
+    private final SelenideElement discountsContent = $(".bonuses-block_wrap"),
             title = $(".paddings.h2");
 
     public DiscountsPage openPage() {

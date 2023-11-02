@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class AuthorizationPage {
 
-    SelenideElement userLogin = $("#USER_LOGIN"),
+    private final SelenideElement userLogin = $("#USER_LOGIN"),
             userPassword = $("#USER_PASSWORD"),
             submitButton = $("[value='Войти']"),
             successfulMessage = $("#h1_title"),

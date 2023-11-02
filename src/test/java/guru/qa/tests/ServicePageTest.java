@@ -17,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 @Story("Функциональность разделов")
 public class ServicePageTest extends BaseTest {
 
-    ServicePage servicePage = new ServicePage();
+    protected ServicePage servicePage = new ServicePage();
 
     @Test
     @Tag("Smoke")

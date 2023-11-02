@@ -24,7 +24,7 @@ public class AuthorizationTest extends BaseTest {
     private final AuthorizationConfig authorizationConfig = ConfigManager.getAuthorization();
     private final BadAuthorizationConfig badAuthorizationConfig = ConfigManager.getBadAuthorization();
 
-    AuthorizationPage authorizationPage = new AuthorizationPage();
+    protected AuthorizationPage authorizationPage = new AuthorizationPage();
 
     @Test
     @Tag("Smoke")

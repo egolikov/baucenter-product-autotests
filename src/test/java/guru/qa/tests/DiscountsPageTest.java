@@ -17,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 @Story("Функциональность разделов")
 public class DiscountsPageTest extends BaseTest {
 
-    DiscountsPage discountsPage = new DiscountsPage();
+    protected DiscountsPage discountsPage = new DiscountsPage();
 
     @Test
     @Tag("Smoke")

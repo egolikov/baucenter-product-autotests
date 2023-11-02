@@ -15,7 +15,8 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class BaseTest {
 
-    MainPage mainPage = new MainPage();
+    protected MainPage mainPage = new MainPage();
+
     private static final WebConfig config = ConfigManager.Instance.read();
 
     @BeforeAll

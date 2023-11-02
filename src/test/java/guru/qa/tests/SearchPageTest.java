@@ -17,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 @Story("Поиск")
 public class SearchPageTest extends BaseTest {
 
-    SearchPage searchPage = new SearchPage();
+    protected SearchPage searchPage = new SearchPage();
 
     @Test
     @Tag("Smoke")

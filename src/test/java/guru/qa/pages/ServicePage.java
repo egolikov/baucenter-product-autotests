@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class ServicePage {
 
-    SelenideElement serviceContent = $(".services-block"),
+    private final SelenideElement serviceContent = $(".services-block"),
             title = $(".h1");
 
     public ServicePage openPage() {

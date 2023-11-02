@@ -17,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 @Story("Функциональность разделов")
 public class NoveltyPageTest extends BaseTest {
 
-    NoveltyPage noveltyPage = new NoveltyPage();
+    protected NoveltyPage noveltyPage = new NoveltyPage();
 
     @Test
     @Tag("Smoke")

@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class CartPage {
 
-    SelenideElement cartContent = $(".co-item"),
+    private final SelenideElement cartContent = $(".co-item"),
             title = $(".co-item__name");
 
     public CartPage openPage() {

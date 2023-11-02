@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class AdvicesPage {
 
-    SelenideElement advicesContent = $(".ib-wrapper"),
+    private final SelenideElement advicesContent = $(".ib-wrapper"),
             title = $("#h1_title");
 
     public AdvicesPage openPage() {
@@ -17,7 +17,6 @@ public class AdvicesPage {
 
         return this;
     }
-
 
     public AdvicesPage checkAdvicesTitle(String value) {
         title.shouldHave(text(value));
