@@ -19,8 +19,4 @@ public enum ConfigManager {
     public static AuthorizationConfig getAuthorization() {
         return ConfigCache.getOrCreate(AuthorizationConfig.class);
     }
-
-    public static BadAuthorizationConfig getBadAuthorization() {
-        return ConfigCache.getOrCreate(BadAuthorizationConfig.class);
-    }
 }

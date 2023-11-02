@@ -3,7 +3,7 @@ package guru.qa.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-            "classpath:credentials.properties"
+            "classpath:secrets.properties"
     })
 
     public interface AuthorizationConfig extends Config {

@@ -1,6 +1,7 @@
 package guru.qa.tests;
 
 import guru.qa.pages.AuthorizationPage;
+import guru.qa.tests.helpers.TestData;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -12,7 +13,6 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 import guru.qa.config.AuthorizationConfig;
-import guru.qa.config.BadAuthorizationConfig;
 import guru.qa.config.ConfigManager;
 
 @Owner("Голиков Евгений")
@@ -22,9 +22,9 @@ import guru.qa.config.ConfigManager;
 public class AuthorizationTest extends BaseTest {
 
     private final AuthorizationConfig authorizationConfig = ConfigManager.getAuthorization();
-    private final BadAuthorizationConfig badAuthorizationConfig = ConfigManager.getBadAuthorization();
 
     protected AuthorizationPage authorizationPage = new AuthorizationPage();
+    protected TestData testData = new TestData();
 
     @Test
     @Tag("Smoke")
@@ -64,11 +64,11 @@ public class AuthorizationTest extends BaseTest {
         });
 
         step("Ввести невалидный Логин", () -> {
-            authorizationPage.setLogin(badAuthorizationConfig.BadUserName());
+            authorizationPage.setLogin(testData.generateRandomPhoneNumber());
         });
 
         step("Ввести невалидный Пароль", () -> {
-            authorizationPage.setPassword(badAuthorizationConfig.BadPassword());
+            authorizationPage.setPassword(testData.generateRandomPassword());
         });
 
         step("Нажать кнопку Войти", () -> {
