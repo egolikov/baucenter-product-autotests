@@ -1,12 +1,14 @@
 package guru.qa.config;
 
 import com.codeborne.selenide.Configuration;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
 public class WebConfigProject {
     private final WebConfig webConfig;
+
 
     public WebConfigProject(WebConfig webConfig) {
         this.webConfig = webConfig;
@@ -21,7 +23,8 @@ public class WebConfigProject {
         Configuration.timeout = 10000;
 
         if (webConfig.isRemote()) {
-            Configuration.remote = webConfig.getRemoteUrl();
+            SelenoidConfig selenoidConfig = ConfigFactory.create(SelenoidConfig.class);
+            Configuration.remote = selenoidConfig.getRemoteUrl();
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
