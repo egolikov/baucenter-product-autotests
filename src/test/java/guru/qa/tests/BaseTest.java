@@ -20,7 +20,6 @@ public class BaseTest {
 
     @BeforeAll
     public static void beforeAll() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         WebConfigProject webConfigForProject = new WebConfigProject(config);
         webConfigForProject.webConfig();
 
