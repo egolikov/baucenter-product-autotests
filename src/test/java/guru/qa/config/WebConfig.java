@@ -29,4 +29,6 @@ public interface WebConfig extends Config {
     @DefaultValue("false")
     Boolean isRemote();
 
+    @Key("remoteUrl")
+    String getRemoteUrl();
 }
