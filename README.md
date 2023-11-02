@@ -57,6 +57,18 @@
 gradle clean test -Denv=remote
 ```
 
+Для локального запуска потребуется наличие файла /src/test/resources/credentials.properties
+В этом файле необходимо указать свойства со своими значениями:
+
+* Username = Username
+* Password = Password
+* BadUserName = BadUserName
+* BadPassword = BadPassword
+
+```bash  
+gradle clean test
+```
+
 ## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/baucenter-product-autotests-egolikov/7/allure/">Allure Report</a>
 
 ## 🖨️ Основная страница отчёта
