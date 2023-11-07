@@ -13,7 +13,7 @@ public class WebConfigProject {
         this.webConfig = webConfig;
     }
 
-    public void webConfig() {
+    public void applyWebConfig() {
         Configuration.baseUrl = webConfig.getBaseUrl();
         Configuration.browser = webConfig.getBrowser().toString();
         Configuration.browserVersion = webConfig.getBrowserVersion();

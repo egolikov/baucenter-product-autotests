@@ -2,7 +2,6 @@ package guru.qa.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -24,8 +23,8 @@ public class CartPage {
         return this;
     }
 
-    public CartPage checkCartContent() {
-        cartContent.shouldNotBe(empty);
+    public CartPage checkCartContent(String value) {
+        cartContent.shouldHave(text(value));
 
         return this;
     }

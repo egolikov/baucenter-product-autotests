@@ -34,8 +34,8 @@ public class CartPageTest extends BaseTest {
             mainPage.searchInputText("дверь");
         });
 
-        step("Добавить товар в корзину", () -> {
-            searchPage.addToCart();
+        step("Нажать на кнопку Добавить товар в корзину", () -> {
+            searchPage.clickOnButtonAddToCart();
         });
 
         step("Открыть страницу Товары", () -> {
@@ -47,7 +47,7 @@ public class CartPageTest extends BaseTest {
         });
 
         step("Проверка нахождения товара в Корзине", () -> {
-            cartPage.checkCartContent();
+            cartPage.checkCartContent("Дверь");
         });
     }
 }

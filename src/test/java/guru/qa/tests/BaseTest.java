@@ -22,7 +22,7 @@ public class BaseTest {
     @BeforeAll
     public static void beforeAll() {
         WebConfigProject webConfigForProject = new WebConfigProject(config);
-        webConfigForProject.webConfig();
+        webConfigForProject.applyWebConfig();
 
     }
 

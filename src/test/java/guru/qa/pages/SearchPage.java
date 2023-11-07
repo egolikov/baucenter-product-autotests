@@ -30,7 +30,7 @@ public class SearchPage {
         return this;
     }
 
-    public SearchPage addToCart() {
+    public SearchPage clickOnButtonAddToCart() {
         addToCartButton.click();
         addedToCart.shouldBe(visible);
 
