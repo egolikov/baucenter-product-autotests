@@ -1,15 +1,13 @@
 package guru.qa.tests;
 
 import guru.qa.pages.SearchPage;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
+import static io.qameta.allure.SeverityLevel.CRITICAL;
 
 @Owner("Голиков Евгений")
 @Epic(value = "Тестирование веб приложения Бауцентр")
@@ -19,6 +17,7 @@ public class SearchPageTest extends BaseTest {
 
     protected SearchPage searchPage = new SearchPage();
 
+    @Severity(CRITICAL)
     @Test
     @Tag("Smoke")
     @Tag("Search")

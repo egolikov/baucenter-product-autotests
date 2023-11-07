@@ -1,16 +1,14 @@
 package guru.qa.tests;
 
 import guru.qa.pages.AuthorizationPage;
-import guru.qa.tests.helpers.TestData;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Story;
+import guru.qa.helpers.TestData;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
+import static io.qameta.allure.SeverityLevel.CRITICAL;
 
 import guru.qa.config.AuthorizationConfig;
 import guru.qa.config.ConfigManager;
@@ -26,6 +24,7 @@ public class AuthorizationTest extends BaseTest {
     protected AuthorizationPage authorizationPage = new AuthorizationPage();
     protected TestData testData = new TestData();
 
+    @Severity(CRITICAL)
     @Test
     @Tag("Smoke")
     @Tag("Authorization")
@@ -53,6 +52,7 @@ public class AuthorizationTest extends BaseTest {
         });
     }
 
+    @Severity(CRITICAL)
     @Test
     @Tag("Smoke")
     @Tag("Authorization")
