@@ -1,7 +1,7 @@
 package guru.qa.tests;
 
 import guru.qa.pages.AuthorizationPage;
-import guru.qa.tests.data.TestData;
+import guru.qa.data.TestData;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
