@@ -63,8 +63,6 @@ gradle clean test -Denv=remote
 
 * Username = Username
 * Password = Password
-* BadUserName = BadUserName
-* BadPassword = BadPassword
 
 ```bash  
 gradle clean test
