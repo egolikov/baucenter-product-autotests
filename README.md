@@ -18,6 +18,7 @@
 
 <a id="tools"></a>
 
+<a id="технологии-и-инструменты"></a>
 ## 🔨 Технологии и инструменты:
 
 | Java                                                                                                     | IntelliJ  <br>  Idea                                                                                               | GitHub                                                                                                     | JUnit 5                                                                                                           | Gradle                                                                                                     | Selenide                                                                                                         | Selenoid                                                                                                                  | Allure <br> Report                                                                                                         | Jenkins                                                                                                          | Jira                                                                                                                                    | Telegram                                                                                                            |                                                                                            Allure <br> TestOps |
