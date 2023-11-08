@@ -1,16 +1,17 @@
 package guru.qa.pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.empty;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.*;
 
 public class ActionsPage {
 
     private final SelenideElement actionsContent = $(".action-page-wrapper"),
             title = $("#h1_title");
+
+    private final ElementsCollection actionsContents = $$(".actionBoxBody");
 
     public ActionsPage openPage() {
         open("/actions");
@@ -26,6 +27,12 @@ public class ActionsPage {
 
     public ActionsPage checkActionsContent() {
         actionsContent.shouldNotBe(empty);
+
+        return this;
+    }
+
+    public ActionsPage checkElementOnPageContent(String value) {
+        actionsContents.filter(text(value)).first().shouldBe(visible);
 
         return this;
     }

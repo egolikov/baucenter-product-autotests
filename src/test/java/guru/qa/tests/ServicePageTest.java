@@ -43,5 +43,17 @@ public class ServicePageTest extends BaseTest {
         step("Проверка содержания контента на странице Сервис", () -> {
             servicePage.checkServiceContent();
         });
+
+        step("Проверка наличия вида сервиса [Возврат товаров] на странице Сервис", () -> {
+            servicePage.checkElementOnPageContent("Возврат товара");
+        });
+
+        step("Проверка наличия вида сервиса [Обжим кабеля] на странице Сервис", () -> {
+            servicePage.checkElementOnPageContent("Обжим кабеля");
+        });
+
+        step("Проверка наличия вида сервиса [Дизайн-проект ванной. БЕСПЛАТНО] на странице Сервис", () -> {
+            servicePage.checkElementOnPageContent("Дизайн-проект ванной. БЕСПЛАТНО");
+        });
     }
 }

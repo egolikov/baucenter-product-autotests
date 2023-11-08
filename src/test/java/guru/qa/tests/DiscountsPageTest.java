@@ -43,5 +43,13 @@ public class DiscountsPageTest extends BaseTest {
         step("Проверка содержания контента на странице Бонусы и скидки", () -> {
             discountsPage.checkDiscountsContent();
         });
+
+        step("Проверка наличия бонусной карты [Бонусная карта Бауцентр - Бонус] на странице Бонусы и скидки", () -> {
+            discountsPage.checkElementOnPageContent("Бонусная карта \"Бауцентр - Бонус\"");
+        });
+
+        step("Проверка наличия скидочной карты [Карта скидок отдела Профи] на странице Бонусы и скидки", () -> {
+            discountsPage.checkElementOnPageContent("Карта скидок отдела \"Профи\"");
+        });
     }
 }

@@ -43,5 +43,17 @@ public class NoveltyPageTest extends BaseTest {
         step("Проверка содержания контента на странице Новинки", () -> {
             noveltyPage.checkNoveltyContent();
         });
+
+        step("Проверка наличия каталога [Турецкие ковры с новыми дизайнами] на странице Новинки", () -> {
+            noveltyPage.checkElementOnPageContent("Турецкие ковры с новыми дизайнами");
+        });
+
+        step("Проверка наличия каталога [Монтажный газовый пистолет] на странице Новинки", () -> {
+            noveltyPage.checkElementOnPageContent("Монтажный газовый пистолет");
+        });
+
+        step("Проверка наличия каталога [Глянцевая краска по металлу от Hammerite] на странице Новинки", () -> {
+            noveltyPage.checkElementOnPageContent("Глянцевая краска по металлу от Hammerite");
+        });
     }
 }

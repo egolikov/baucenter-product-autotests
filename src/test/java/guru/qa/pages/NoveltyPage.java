@@ -1,16 +1,17 @@
 package guru.qa.pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.empty;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.*;
 
 public class NoveltyPage {
 
     private final SelenideElement noveltyContent = $(".otherActions"),
             title = $("#h1_title");
+
+    private final ElementsCollection noveltyContents = $$(".otherAdvice");
 
     public NoveltyPage openPage() {
         open("/new");
@@ -26,6 +27,12 @@ public class NoveltyPage {
 
     public NoveltyPage checkNoveltyContent() {
         noveltyContent.shouldNotBe(empty);
+
+        return this;
+    }
+
+    public NoveltyPage checkElementOnPageContent(String value) {
+        noveltyContents.filter(text(value)).first().shouldBe(visible);
 
         return this;
     }

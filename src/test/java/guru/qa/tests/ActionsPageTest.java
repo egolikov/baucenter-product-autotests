@@ -43,5 +43,17 @@ public class ActionsPageTest extends BaseTest {
         step("Проверка содержания контента на странице Акции", () -> {
             actionsPage.checkActionsContent();
         });
+
+        step("Проверка наличия акции [Весь керамогранит из Индии - 10% бонус] на странице Акции", () -> {
+            actionsPage.checkElementOnPageContent("Весь керамогранит из Индии - 10% бонус");
+        });
+
+        step("Проверка наличия акции [Уличные гирлянды - 20% бонус] на странице Акции", () -> {
+            actionsPage.checkElementOnPageContent("Уличные гирлянды - 20% бонус");
+        });
+
+        step("Проверка наличия акции [Плитка настенная Аргус - 15% бонус] на странице Акции", () -> {
+            actionsPage.checkElementOnPageContent("Плитка настенная Аргус - 15% бонус");
+        });
     }
 }
